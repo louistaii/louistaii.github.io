@@ -1,0 +1,118 @@
+* {                                            /* Universal style for everything*/
+    box-sizing: border-box;
+    margin: 0; 
+    padding: 0;
+    font-family: 'AR One Sans', sans-serif;   /*uses AR one sams google font for all text. if not available, use sans-serif*/
+}
+
+body.Home {
+  background-image: url('images/filtered.jpg');
+  background-size: cover;       /* makes the image cover the whole window*/
+  background-position: center 53%; /* moves image up slightly (from 50% to 40%) */
+  background-repeat: no-repeat; /* prevents background repeating if doesnt fill screen */
+  background-attachment: fixed;   /* optional: makes background stay fixed during scroll */
+
+  margin: 0;                     /* remove default margins */
+}
+
+
+.navbar {
+    height: 150px;
+    display: flex;
+    justify-content: center;  /*horizontal*/
+    align-items: center;      /*vertical*/
+    font-size: 20px;
+    
+    position: sticky;  /*when you scroll nav bar will forever show at top*/
+    top: 0;            /* can be left:0, right:0, bottom:0*/
+    
+    z-index: 999;      /*so that its always top layer*/
+}
+
+
+.navbar_div{
+    justify-content: space-between;
+    height:150px;
+
+    width: 100%;
+    max-width: 1300px;
+    
+    z-index:1; 
+
+    margin: 0 auto;  /* 0 is vertical, auto is center horizontally using auto amrgins */
+    padding: 0 50px; /* Adds space (padding) between left and right of div */
+                     /* 0 is vertical padding, 50 horizontal*/
+}
+
+.navbar_list{
+    display: flex;  /* fits the list in the div which makes the list horizontal*/
+    justify-content: center;
+    list-style: none; /* removes the . in the list*/
+    gap: 10vw;
+    max-width: 90vw;
+
+    align-items: center;
+    text-align: center;
+}
+
+.navbar_item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 70px 0;
+    height: 100%;
+}
+
+.navbar_links{
+    color:white;         
+    font-size: 16px;      
+    text-decoration: none;
+    transition: all 0.1s ease; /* smoothens the hover effect */
+}
+
+.navbar_links:hover {
+  font-weight: bold;
+  transform: scale(1.05);
+}
+
+
+.title_div{
+    display: flex;
+    height: calc(70vh - 100px); /* 100vh = full viewport height, minus navbar height */
+    align-items: center;
+    justify-content: center; 
+    flex-direction: column;
+}
+
+.title_div h1 {
+    color: white; 
+    font-size: 70px;      
+    font-weight: bold;    
+    margin-bottom: 10px;  
+}
+
+.title_div h4 {
+    color: white;
+    font-size: 20px;    
+    font-weight: bold;  
+}
+
+.socials_list {
+  display: flex;
+  gap: 120px;
+  list-style: none;
+  justify-content: center;
+  padding: 30px 0;
+}
+
+.socials_links i{
+  color: white;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.socials_links:hover i{
+  transform: scale(1.2);
+}
+
+
