@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Louis Tai</title> <!--text in tab bar-->
+    <link rel ="stylesheet" href="style.css"/>   <!--link css file-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=AR+One+Sans&display=swap"> <!--link google font-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> <!--link icons-->
+</head>
+
+<body class="about">
+    <nav class="navbar">   <!--used for navigation section where theres alot of links-->
+        <div class ="navbar_div">
+            <ul class="navbar_list">
+                <li class="navbar_item">
+                    <a href ="/" class="navbar_links">Home</a>
+                </li>
+                <li class="navbar_item">
+                    <a href ="about.html" class="navbar_links active">About</a>
+                </li>
+                <li class="navbar_item">
+                    <a href ="/" class="navbar_links">Resume</a>
+                </li>
+                <li class="navbar_item">
+                    <a href ="/" class="navbar_links">Projects</a>
+                </li>
+            </ul> 
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <div class="about-section">
+            <div class="photo-container">
+                <div class="photo-frame">
+                    <img src="images/about2.jpg" alt="Louis" class="profile-photo">
+                </div>
+            </div>
+            
+            <div class="content">
+                <h1 class="name">About Me</h1>        
+                <p class="description">
+                    Hi! I'm Louis, an undergraduate at the National University of Singapore, 
+                    majoring in Computer Engineering with a minor in Management. I have a strong foundation in both software and hardware, 
+                    with experience across various programming languages and hands-on expertise in hardware design and development. 
+                    I'm passionate about building innovative tech solutions and continuously expanding my skill set at the 
+                    intersection of engineering and business.
+                </p>
+                
+                <div class="skills-section">
+                    <!-- Education Dropdown -->
+                    <div class="skill-category">
+                        <div class="category-header" onclick="toggleCategory('education')">
+                            <h3>Education</h3>
+                            <i class="fas fa-chevron-down" id="education-icon"></i>
+                        </div>
+                        <div class="skills" id="education" style="display: none;">
+                            <p>National University of Singapore</p>
+                            <p>Major: Computer Engineering (B.Eng)</p>
+                            <p>Minor: Management</p>
+                            <p>Expected Graduation: 2027</p>
+                            <p>Honors: Second Upper</p>
+                        </div>
+                    </div>
+
+                    <!-- Programming Languages Dropdown -->
+                    <div class="skill-category">
+                        <div class="category-header" onclick="toggleCategory('programming')">
+                            <h3>Programming Languages</h3>
+                            <i class="fas fa-chevron-down" id="programming-icon"></i>
+                        </div>
+                        <div class="skills" id="programming" style="display: none;">
+                            <span class="skill-tag">C, C++</span>
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">HTML, CSS</span>
+                            <span class="skill-tag">JavaScript</span>
+                        </div>
+                    </div>
+                
+                    <div class="skill-category">
+                        <div class="category-header" onclick="toggleCategory('frameworks')">
+                            <h3>Frameworks / Tools</h3>
+                            <i class="fas fa-chevron-down" id="frameworks-icon"></i>
+                        </div>
+                        <div class="skills" id="frameworks" style="display: none;">
+                            <span class="skill-tag">TensorFlow</span>
+                            <span class="skill-tag">Figma</span>
+                            <span class="skill-tag">SolidWorks</span>
+                            <span class="skill-tag">MatLab</span>
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">VS Code</span>
+                        </div>
+                    </div>
+
+                    <!-- Embedded Systems Dropdown -->
+                    <div class="skill-category">
+                        <div class="category-header" onclick="toggleCategory('embedded')">
+                            <h3>Embedded Systems</h3>
+                            <i class="fas fa-chevron-down" id="embedded-icon"></i>
+                        </div>
+                        <div class="skills" id="embedded" style="display: none;">
+                            <span class="skill-tag">Arduino</span>
+                            <span class="skill-tag">Raspberry Pi</span>
+                            <span class="skill-tag">ESP32</span>
+                            <span class="skill-tag">FPGA</span>
+                            <span class="skill-tag">Microcontrollers</span>
+                            <span class="skill-tag">Circuit Design</span>
+                            <span class="skill-tag">PCB Layout</span>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>   
+    </div>
+    
+    <script>
+        function toggleCategory(categoryId) {
+            const skillsDiv = document.getElementById(categoryId);
+            const icon = document.getElementById(categoryId + '-icon');
+            
+            if (skillsDiv.style.display === 'none' || skillsDiv.style.display === '') {
+                // Show the skills
+                skillsDiv.style.display = 'flex';
+                icon.classList.add('fa-chevron-down');
+                icon.style.transform = 'rotate(180deg)';
+                
+                
+            } else {
+                // Hide the skills
+                skillsDiv.style.display = 'none';
+                icon.classList.add('fa-chevron-down');
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>
