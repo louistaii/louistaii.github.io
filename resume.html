@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Louis Tai</title> <!--text in tab bar-->
+    <link rel ="stylesheet" href="style.css"/>   <!--link css file-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=AR+One+Sans&display=swap"> <!--link google font-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> <!--link icons-->
+    <script src="apps.js"></script>
+</head>
+
+<body class="about">
+    <nav class="navbar"> 
+        <div class ="navbar_div">
+            <ul class="navbar_list">
+                <li class="navbar_item">
+                    <a href ="/" class="navbar_links">Home</a>
+                </li>
+                <li class="navbar_item">
+                    <a href ="about.html" class="navbar_links">About</a>
+                </li>
+                <li class="navbar_item">
+                    <a href ="resume.html" class="navbar_links active">Resume</a>
+                </li>
+                <li class="navbar_item">
+                    <a href ="/" class="navbar_links">Projects</a>
+                </li>
+            </ul> 
+        </div>
+    </nav>
+
+
+    <div class="responsive-pdf">
+        <iframe 
+            src="images/Generic resume.pdf#toolbar=0&navpanes=0&scrollbar=0&statusbar=0&messages=0&view=FitH" 
+            title="Resume"
+            loading="lazy">
+        </iframe>
+
+        <div class="mobile-fallback">
+            <h3>📄 Resume</h3>
+            <p>View or download the PDF on your device</p>
+        </div>
+
+    </div>
+
+    <div class="download-btn">
+        <a href="images/Generic resume.pdf" download="Resume.pdf">
+            <span class="download_icon">📥</span>
+            Download PDF
+        </a>
+    </div>
+
+
+</body>
+
+</html>

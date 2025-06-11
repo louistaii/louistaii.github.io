@@ -8,7 +8,7 @@
 body.home {
   background-image: url('images/home.jpg');
   background-size: cover;       /* makes the image cover the whole window*/
-  background-position: center 53%; /* moves image up slightly (from 50% to 40%) */
+  background-position: center 51%; /* moves image up slightly (from 50% to 40%) */
   background-repeat: no-repeat; /* prevents background repeating if doesnt fill screen */
   background-attachment: fixed;   /* optional: makes background stay fixed during scroll */
 
@@ -30,7 +30,7 @@ body.home {
 
 .navbar_div{
     justify-content: center;
-    height:150px;
+    height:100px;
 
     width: fit-content;
     max-width: 1300px;
@@ -151,9 +151,6 @@ body.home {
   text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-
-
-
  
 @keyframes fadeInUp {
   from {
@@ -177,15 +174,6 @@ body.home {
   }
 }
 
-@keyframes rotateProfilePic {
-  0% {
-    transform: translateX(-16px) scale(1.5) rotate(0deg);
-  }
-  100% {
-    transform: translateX(-16px) scale(1.5) rotate(360deg);
-  }
-}
-
 @keyframes slideInRight {
   from {
   opacity: 0;
@@ -196,7 +184,6 @@ body.home {
   transform: translateX(0);
   }
 }
-
 
 @keyframes dropDown {
     from {
@@ -214,12 +201,11 @@ body.home {
 }
 
 body.about{
-  /*background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 50%, #dee2e6 100%);*/
-  background-color: #e1e5ea;
+  background-color: #c8bfae;
   min-height: 100vh;
 }
 
-/* Container responsive sizing */
+
 .container {
   max-width: 1200px;
   width: 90%;
@@ -390,6 +376,7 @@ body.about{
     background: rgba(255, 255, 255, 0.05);
     justify-content: flex-start;
     animation: dropDown 0.3s ease-out;
+    color: #555;
 
     /* Fix dropdown overflow on mobile */
     width: 100%;
@@ -422,7 +409,87 @@ body.about{
 
 .skill-tag:hover {
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+
+.responsive-pdf {
+  position: relative;
+  width: 60%;
+  margin: 2rem auto;
+  height: 0;
+  padding-bottom: 129.4%; /* A4 aspect ratio (210/297) * 100 */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  animation: slideInRight 1s ease-out;
+}
+
+.responsive-pdf iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.responsive-pdf iframe {
+  display: block;
+}
+.mobile-fallback {
+  display: none; /* Hidden by default */
+}
+
+/* Fixed version - hover effects on the actual button */
+.download-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  
+  width: fit-content;
+  margin: 0 auto;
+  
+  animation: fadeInUp 1s ease-out;
+  
+  /* Basic container styles */
+  background: #D4CFC4;
+  border-radius: 18px;
+  padding: 12px 24px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.download-btn a {
+  color: white;
+  font-size: clamp(12px, 2.5vw, 18px);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.download-btn a:hover {
+  font-weight: bold;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Download icon */
+.download_icon {
+  font-size: 1.2em;
+  transition: transform 0.3s ease;
+}
+
+.download_link:hover .download_icon {
+  transform: translateY(2px);
 }
 
 /* Mobile-specific styles */
@@ -506,5 +573,15 @@ body.about{
   .skills-section {
     width: 100%;
     overflow: hidden;
+  }
+
+  .responsive-pdf iframe {
+    display: none; /* Hide iframe on mobile */
+  }
+
+  .mobile-fallback {
+      display: block; /* Show fallback on mobile */
+      text-align: center;
+      padding: 40px 20px;
   }
 }

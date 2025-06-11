@@ -8,10 +8,11 @@
     <link rel ="stylesheet" href="style.css"/>   <!--link css file-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=AR+One+Sans&display=swap"> <!--link google font-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> <!--link icons-->
+    <script src="apps.js"></script>
 </head>
 
 <body class="about">
-    <nav class="navbar">   <!--used for navigation section where theres alot of links-->
+    <nav class="navbar"> 
         <div class ="navbar_div">
             <ul class="navbar_list">
                 <li class="navbar_item">
@@ -21,7 +22,7 @@
                     <a href ="about.html" class="navbar_links active">About</a>
                 </li>
                 <li class="navbar_item">
-                    <a href ="/" class="navbar_links">Resume</a>
+                    <a href ="resume.html" class="navbar_links">Resume</a>
                 </li>
                 <li class="navbar_item">
                     <a href ="/" class="navbar_links">Projects</a>
@@ -35,15 +36,14 @@
         <div class="about-section">
             <div class="photo-container">
                 <div class="photo-frame">
-                    <img src="images/about2.jpg" alt="Louis" class="profile-photo">
+                    <img src="images/about.jpg" alt="Louis" class="profile-photo">
                 </div>
             </div>
             
             <div class="content">
                 <h1 class="name">About Me</h1>        
                 <p class="description">
-                    Hi! I'm Louis, an undergraduate at the National University of Singapore, 
-                    majoring in Computer Engineering with a minor in Management. I have a strong foundation in both software and hardware, 
+                    Hi! I'm Louis. I have a strong foundation in both software and hardware, 
                     with experience across various programming languages and hands-on expertise in hardware design and development. 
                     I'm passionate about building innovative tech solutions and continuously expanding my skill set at the 
                     intersection of engineering and business.
@@ -57,11 +57,13 @@
                             <i class="fas fa-chevron-down" id="education-icon"></i>
                         </div>
                         <div class="skills" id="education" style="display: none;">
-                            <p>National University of Singapore</p>
-                            <p>Major: Computer Engineering (B.Eng)</p>
-                            <p>Minor: Management</p>
-                            <p>Expected Graduation: 2027</p>
-                            <p>Honors: Second Upper</p>
+                            <ul style="list-style: none; margin: 0;">
+                                <li><h3><strong>🦁🎓National University of Singapore</strong></h3></li>
+                                <li><strong>Major:</strong> Computer Engineering (B.Eng)</li>
+                                <li><strong>Minor:</strong> Management</li>
+                                <li><strong>Graduation:</strong> 2027</li>
+                                <li><strong>Honours:</strong> Second Upper</li>
+                            </ul>
                         </div>
                     </div>
 
@@ -117,27 +119,6 @@
             </div>
         </div>   
     </div>
-    
-    <script>
-        function toggleCategory(categoryId) {
-            const skillsDiv = document.getElementById(categoryId);
-            const icon = document.getElementById(categoryId + '-icon');
-            
-            if (skillsDiv.style.display === 'none' || skillsDiv.style.display === '') {
-                // Show the skills
-                skillsDiv.style.display = 'flex';
-                icon.classList.add('fa-chevron-down');
-                icon.style.transform = 'rotate(180deg)';
-                
-                
-            } else {
-                // Hide the skills
-                skillsDiv.style.display = 'none';
-                icon.classList.add('fa-chevron-down');
-                icon.style.transform = 'rotate(0deg)';
-            }
-        }
-    </script>
 
 
 </body>
