@@ -5,15 +5,7 @@
     font-family: 'AR One Sans', sans-serif;   /*uses AR one sams google font for all text. if not available, use sans-serif*/
 }
 
-body.home {
-  background-image: url('images/home.jpg');
-  background-size: cover;       /* makes the image cover the whole window*/
-  background-position: center 51%; /* moves image up slightly (from 50% to 40%) */
-  background-repeat: no-repeat; /* prevents background repeating if doesnt fill screen */
-  background-attachment: fixed;   /* optional: makes background stay fixed during scroll */
 
-  margin: 0;                     /* remove default margins */
-}
 
 
 .navbar {
